@@ -1,0 +1,82 @@
+$bg-section: #EDF2EC;
+$links-nav: #010201;
+$main-text: #E06733;
+$inika-text: 'Inika', sans-serif;
+
+
+* {
+    /*margin: 0;
+    padding: 0;*/
+    box-sizing: border-box;   
+    
+  }
+  
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+.header {
+    background-color: $bg-section;
+    
+}
+.header_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: $inika-text;
+    font-style: normal;
+    font-size: 16px;
+}
+.logo {
+    display: flex;
+    justify-content: space-between;
+    
+    &-img {
+        padding-bottom: 5px;
+    }
+
+    &-text {       
+        font-weight: 400;
+        line-height: 21px;
+    }
+  
+}
+
+.nav-list {
+    width: 465px;
+    justify-content: space-between;
+    list-style-type: none;
+    display: flex;
+    &-item {    
+        font-weight: 400;
+        line-height: 50px;
+       
+    }
+
+    &-link {
+        text-decoration: none;
+        color: $links-nav;
+        &:hover {
+            cursor: pointer;
+            @extend .nav-list-active;
+            transition: 0.5s;
+        }
+    }
+
+    &-active {
+        font-weight: 700;
+        color: $main-text;
+    }
+}
+
+
+    
+   
+    
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
